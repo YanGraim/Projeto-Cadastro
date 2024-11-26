@@ -41,6 +41,7 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 560px;
+    z-index: 9;
 }
 
 .input {
@@ -67,6 +68,7 @@ body {
     cursor: pointer;
     margin-bottom: 18px;
     transition: background-color 0.5s linear;
+    z-index: 2;
 }
 
 .button:hover{
@@ -120,4 +122,18 @@ body {
     max-width: 400px;
     line-height: 150%;
     color: #fff;
+}
+
+.form::before {
+    content: '';
+    position: absolute;
+    background-image: url('./assets/code.svg');
+    background-size: 90px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+    opacity: 0.4;
+    bottom: -50px;
+    right: -35px;
 }
